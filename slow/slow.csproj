@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46C5B734-0677-43CA-B554-C346047DCF02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>slow</RootNamespace>
+    <AssemblyName>slow</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Eden Juscelino\Documents\11\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0FB878970BD0B4F465736B4E641C52EF17338734</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>slow_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="booksEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booksEdit.Designer.cs">
+      <DependentUpon>booksEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booksSee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booksSee.Designer.cs">
+      <DependentUpon>booksSee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="booksView.cs">
+      <DependentUpon>booksView.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="booksView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>booksView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help.Designer.cs">
+      <DependentUpon>help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerEditstaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerEditstaff.Designer.cs">
+      <DependentUpon>managerEditstaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerEditStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerEditStudents.Designer.cs">
+      <DependentUpon>managerEditStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerForm.Designer.cs">
+      <DependentUpon>managerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerLogin.Designer.cs">
+      <DependentUpon>managerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerRental.Designer.cs">
+      <DependentUpon>managerRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerSeeStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerSeeStudents.Designer.cs">
+      <DependentUpon>managerSeeStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myBooks.Designer.cs">
+      <DependentUpon>myBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rental1.cs">
+      <DependentUpon>rental1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rental1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rental1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="seeStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seeStaff.Designer.cs">
+      <DependentUpon>seeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffForm.Designer.cs">
+      <DependentUpon>staffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffLogin.Designer.cs">
+      <DependentUpon>staffLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentForm.Designer.cs">
+      <DependentUpon>studentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentLogin.Designer.cs">
+      <DependentUpon>studentLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentSeeBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentSeeBooks.Designer.cs">
+      <DependentUpon>studentSeeBooks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="booksEdit.resx">
+      <DependentUpon>booksEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booksSee.resx">
+      <DependentUpon>booksSee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help.resx">
+      <DependentUpon>help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerEditstaff.resx">
+      <DependentUpon>managerEditstaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerEditStudents.resx">
+      <DependentUpon>managerEditStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerForm.resx">
+      <DependentUpon>managerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerLogin.resx">
+      <DependentUpon>managerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerRental.resx">
+      <DependentUpon>managerRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerSeeStudents.resx">
+      <DependentUpon>managerSeeStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myBooks.resx">
+      <DependentUpon>myBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="seeStaff.resx">
+      <DependentUpon>seeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffForm.resx">
+      <DependentUpon>staffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffLogin.resx">
+      <DependentUpon>staffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentForm.resx">
+      <DependentUpon>studentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentLogin.resx">
+      <DependentUpon>studentLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentSeeBooks.resx">
+      <DependentUpon>studentSeeBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="booksView.xsc">
+      <DependentUpon>booksView.xsd</DependentUpon>
+    </None>
+    <None Include="booksView.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>booksView.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="booksView.xss">
+      <DependentUpon>booksView.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="slow_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rental1.xsc">
+      <DependentUpon>rental1.xsd</DependentUpon>
+    </None>
+    <None Include="rental1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rental1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rental1.xss">
+      <DependentUpon>rental1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\libaphoto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students-notebooks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-people-thumbs-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lady1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
